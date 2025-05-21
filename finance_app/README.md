@@ -34,7 +34,7 @@ Web tarayıcı (grafiklerin görüntülenmesi için)
 ## 🖥️ Kurulum ve Çalıştırma
 
 ```bash
-git clone https://github.com/kullanici-adi/kisisel-finans-yonetimi.git
+git clone https://github.com/polenkadife/kisisel-finans-yonetimi.git
 cd kisisel-finans-yonetimi
 pip install -r requirements.txt
 python main.py
