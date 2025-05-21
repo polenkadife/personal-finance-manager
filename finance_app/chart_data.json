@@ -1,0 +1,51 @@
+{
+  "type": "pie",
+  "data": {
+    "labels": [
+      "Maaş",
+      "Yiyecek"
+    ],
+    "datasets": [
+      {
+        "label": "Gelir Dağılımı",
+        "data": [
+          6000.0,
+          200.0
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB"
+        ],
+        "borderColor": [
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        "borderWidth": 1
+      }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "tooltip": {
+        "enabled": true,
+        "callbacks": {
+          "label": "function(context) {\n                                var label = context.label || '';\n                                var value = context.raw || 0;\n                                var total = context.dataset.data.reduce(function(a, b) { return a + b; }, 0);\n                                var percentage = total ? ((value / total) * 100).toFixed(2) : 0;\n                                return label + ': ' + value.toFixed(2) + ' TL (' + percentage + '%)';\n                            }"
+        }
+      },
+      "centerText": {
+        "display": true,
+        "text": "Toplam: 6200.00 TL"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "id": "centerText",
+      "beforeDraw": "function(chart) {\n                    if (chart.options.plugins.centerText.display) {\n                        var ctx = chart.ctx;\n                        var width = chart.width;\n                        var height = chart.height;\n                        ctx.save();\n                        ctx.font = 'bold 16px Arial';\n                        ctx.textAlign = 'center';\n                        ctx.textBaseline = 'middle';\n                        ctx.fillStyle = '#FFFFFF';\n                        ctx.fillText(chart.options.plugins.centerText.text, width / 2, height / 2);\n                        ctx.restore();\n                    }\n                }"
+    }
+  ]
+}
