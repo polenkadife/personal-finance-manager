@@ -35,7 +35,7 @@ Web tarayıcı (grafiklerin görüntülenmesi için)
 
 ```bash
 git clone https://github.com/polenkadife/personal-finance-manager.git
-cd kisisel-finans-yonetimi
+cd personal-finance-manager
 pip install -r requirements.txt
 python main.py
 ```
