@@ -14,7 +14,7 @@ Raporlama: Finansal özetler ve bütçe raporları.
 ## 🛠 Gereksinimler
 
 Projenin çalışması için aşağıdaki bağımlılıklar gereklidir:
-Python 3 
+Python 3.13.3 
 Gerekli Python kütüphaneleri (requirements.txt'de listelenmiştir):
 customtkinter==5.2.2
 pandas==2.2.2
